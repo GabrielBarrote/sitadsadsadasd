@@ -158,11 +158,84 @@ h1, h2, h3 { line-height: 1.1; margin-bottom: 1rem; color: inherit; }
 .status-badge.error { background: rgba(230, 57, 70, 0.2); color: var(--color-red); border: 1px solid var(--color-red); }
 .status-badge.success { background: rgba(0,0,0,0.1); color: var(--color-black); border: 1px solid rgba(0,0,0,0.5); }
 
+/* --- 5. Engineering Flip Cards --- */
+.flip-cards-container {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2.5rem; perspective: 1000px;
+}
+
+.flip-card {
+    background-color: transparent; height: 420px; cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative; width: 100%; height: 100%; text-align: center;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); transform-style: preserve-3d;
+    box-shadow: var(--shadow-soft); border-radius: var(--radius-xl);
+}
+
+.flip-card.flipped .flip-card-inner, .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden;
+    border-radius: var(--radius-xl); overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;
+}
+
+.flip-card-front {
+    background-color: var(--color-bg-dark); color: white; background-size: cover; background-position: center;
+}
+.flip-card-front::after { content: ''; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%); z-index: 1; }
+
+.card-title-overlay {
+    position: relative; z-index: 2; font-family: var(--font-heading); font-size: 2.2rem;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5); transform: translateY(40px); transition: var(--transition-smooth);
+}
+.flip-card:hover .card-title-overlay { transform: translateY(0); }
+
+.flip-card-back {
+    background: linear-gradient(135deg, var(--color-bg-dark) 0%, #1a1a1a 100%); color: white;
+    transform: rotateY(180deg); padding: 2.5rem; text-align: left; border: 1px solid rgba(255,255,255,0.05);
+}
+.flip-card-back h3 { color: var(--color-gold); font-size: 1.8rem; margin-bottom: 1rem; }
+
+/* --- 6. Famous Figures Interactive Timeline --- */
+.timeline {
+    position: relative; max-width: 900px; margin: 3rem auto 0;
+}
+.timeline::after {
+    content: ''; position: absolute; width: 4px; background-color: var(--color-red);
+    top: 0; bottom: 0; left: 50%; margin-left: -2px; border-radius: 2px;
+}
+
+.timeline-item {
+    padding: 10px 50px; position: relative; width: 50%; display: flex; flex-direction: column;
+}
+.timeline-item:nth-child(even) { left: 50%; align-items: flex-start; }
+.timeline-item:nth-child(odd) { left: 0; align-items: flex-end; text-align: right; }
+
+.timeline-img {
+    width: 140px; height: 140px; border-radius: 50%; background-size: cover; background-position: center; border: 4px solid var(--color-gold);
+    margin-bottom: 1.5rem; z-index: 1; background-color: white; transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s;
+}
+
+.timeline-content {
+    background: white; padding: 2rem; border-radius: var(--radius-lg); position: relative; transition: var(--transition-smooth);
+    cursor: pointer; border: 1px solid transparent; box-shadow: var(--shadow-soft); width: 100%; max-width: 400px;
+}
+.timeline-era { color: var(--color-gold); font-weight: 800; display: block; margin-bottom: 1rem; letter-spacing: 1px; }
+
+.timeline-details { max-height: 0; overflow: hidden; opacity: 0; transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+.expand-hint { display: block; font-size: 0.8rem; color: var(--color-muted); margin-top: 10px; font-weight: 600; text-transform: uppercase; }
+
+.interactive-timeline.active .timeline-details { max-height: 250px; opacity: 1; margin-top: 1rem; }
+.interactive-timeline.active .expand-hint { display: none; }
+.interactive-timeline.active .timeline-content {
+    background: var(--color-bg-dark); color: white; border-color: var(--color-gold); transform: scale(1.05); box-shadow: var(--shadow-hover);
+}
+.interactive-timeline:hover .timeline-img { transform: scale(1.15); box-shadow: 0 15px 30px rgba(0,0,0,0.3); }
+
 /* Advanced IntersectionObserver Animations */
-.reveal-fade { opacity: 0; transition: opacity 1s ease-out; }
-.reveal-slide-up { opacity: 0; transform: translateY(60px); transition: var(--transition-smooth); }
-.reveal-slide-left { opacity: 0; transform: translateX(60px); transition: var(--transition-smooth); }
-.reveal-slide-right { opacity: 0; transform: translateX(-60px); transition: var(--transition-smooth); }
 
 /* Visibility Modifiers */
 .in-view { opacity: 1 !important; transform: translate(0,0) !important; }

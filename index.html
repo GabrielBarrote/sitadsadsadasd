@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Germany: Community and Culture</title>
+    <meta name="description" content="An advanced educational overview of Germany for the Community and Culture project.">
+    <!-- Google Fonts: Modern sans-serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Premium Navbar with Glassmorphism -->
+    <nav class="navbar" id="navbar">
+        <div class="logo">DE<span class="highlight-gold">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#people">People</a></li>
+            <li><a href="#food">Food</a></li>
+            <li><a href="#culture">Culture</a></li>
+            <li><a href="#problem">Problem & Solution</a></li>
+        </ul>
+        <div class="nav-indicator" id="nav-indicator"></div>
+    </nav>
+
+    <!-- Scroll Progress line -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    <!-- Main Content wrapper -->
+    <main>
+        <!-- 1. People (Parallax Hero) -->
+        <section id="people" class="section hero-section animate-on-scroll">
+            <div class="hero-bg parallax" style="background-image: url('imagens/real_brandenburg.jpg');"></div>
+            <div class="hero-overlay"></div>
+            <div class="content-wrapper">
+                <div class="text-content hero-glass-panel slide-up">
+                    <span class="section-tagline">SECTION 01</span>
+                    <h1 class="modern-heading">German <span class="highlight-gold">People</span></h1>
+                    <p class="description lead-text">
+                        Germany embraces a diverse, highly modern society. People <strong>who</strong> live in Germany often value organization, punctuality, and efficiency above all. They find great joy in spending time with family and friends and maintain a remarkably strong sense of community and social responsibility.
+                    </p>
+                    <a href="#food" class="btn-scroll">Explore More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Food (Interactive Hover Cards) -->
+        <section id="food" class="section dark-section animate-on-scroll">
+            <div class="content-wrapper">
+                <div class="text-content text-center full-width reveal-fade">
+                    <span class="section-tagline highlight-red">SECTION 02</span>
+                    <h2 class="modern-heading">Hearty <span class="highlight-red">Traditions</span></h2>
+                    <p class="sub-heading">German cuisine is celebrated worldwide for its hearty and deeply comforting flavors.</p>
+                    
+                    <div class="food-cards-container mt-4">
+                        <!-- Card 1 -->
+                        <div class="interactive-card reveal-slide-up delay-1">
+                            <div class="card-image" style="background-image: url('imagens/real_food.jpg');"></div>
+                            <div class="card-content">
+                                <h3>Pretzels & Bread</h3>
+                                <p>Pretzels (Brezel) are a famous baked delicacy <strong>that</strong> you can find in almost every bakery across the country. Bread forms the structural cornerstone of the traditional German diet.</p>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="interactive-card reveal-slide-up delay-2">
+                            <div class="card-image" style="background-image: url('imagens/blackforest.png');"></div>
+                            <div class="card-content">
+                                <h3>Bratwurst</h3>
+                                <p>Bratwurst is a beloved traditional sausage <strong>which</strong> is often enjoyed natively at lively street festivals, outdoor Christmas markets, and weekend family barbecues.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Culture (Dynamic Gallery) -->
+        <section id="culture" class="section light-bg animate-on-scroll">
+            <div class="content-wrapper">
+                <div class="text-content section-grid">
+                    <div class="grid-text reveal-slide-right">
+                        <span class="section-tagline highlight-gold">SECTION 03</span>
+                        <h2 class="modern-heading">Vibrant <span class="highlight-gold">Culture</span></h2>
+                        <p class="lead-text">German culture resonates deeply with ancient traditions, grand celebrations, and profound appreciation for daily balance.</p>
+                        
+                        <ul class="custom-list">
+                            <li>
+                                <div class="list-icon">🍺</div>
+                                <div>
+                                    <strong>Oktoberfest</strong>
+                                    <p>Munich is a vibrant historical city <strong>where</strong> the world-famous Oktoberfest takes place every year.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon">❄️</div>
+                                <div>
+                                    <strong>Winter Markets</strong>
+                                    <p>During festive winters, historic squares transform into magical spaces <strong>where</strong> locals gather warmly to drink Glühwein.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="list-icon">🧘‍♂️</div>
+                                <div>
+                                    <strong>Sunday Rest</strong>
+                                    <p>Sundays are strictly observed as a quiet day of rest (Ruhetag), allowing families time to completely disconnect.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="grid-images reveal-slide-left">
+                        <div class="gallery-layout">
+                            <div class="gallery-main hover-zoom img-radius" style="background-image: url('imagens/neuschwanstein.png');"></div>
+                            <div class="gallery-sub">
+                                <div class="sub-img hover-zoom img-radius" style="background-image: url('imagens/burg_eltz.png');"></div>
+                                <div class="sub-img hover-zoom img-radius" style="background-image: url('imagens/cologne.png');"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Problem & Solution (Contrast Split Design) -->
+        <section id="problem" class="section split-section animate-on-scroll conclusion-section pt-0">
+            <div class="split-layout">
+                <div class="split-side problem-side reveal-fade">
+                    <div class="split-inner">
+                         <div class="status-badge error">PROBLEM</div>
+                         <h2>The Energy <br>Transition</h2>
+                         <p class="big-text">
+                             Germany completely wants to use 100% clean energy like wind and solar power. However, there are days <strong>when</strong> the weather is simply too calm or cloudy to generate enough power for the entire country. This creates a risk of energy shortages.
+                         </p>
+                    </div>
+                </div>
+                <div class="split-side solution-side reveal-fade delay-2">
+                    <div class="split-inner">
+                        <div class="status-badge success">SOLUTION</div>
+                        <h2>Battery <br>Storage Grids</h2>
+                        <p class="big-text">
+                            To fix this, the nation is building massive industrial battery networks to store the excess energy captured during sunny and windy days. This ensures that electricity is brilliantly available <strong>when</strong> people and industries need it the most.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="modern-footer">
+        <div class="footer-content">
+            <h2 class="footer-logo">GERMANY<span class="highlight-gold">.</span></h2>
+            <p>Designed as an advanced educational showcase for the <br>"Community and Culture" School Project.</p>
+            <div class="flag-bar mt-4">
+                <div class="stripe black"></div>
+                <div class="stripe red"></div>
+                <div class="stripe gold"></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
